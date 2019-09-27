@@ -1,0 +1,37 @@
+{
+    "name": "LKozlova/Widgets",
+    "description": "The simple Widgets Package for Laravel",
+    "keywords": [
+        "laravel",
+        "widgets"
+    ],
+    "homepage": "https://github.com/LKozlova/Widgets",
+    "authors": [
+        {
+            "name": "Kozlova Lyubov Evgenevna",
+            "email": "amamamaluba@gmail.com"
+        }
+    ],
+    "require": {
+      "php": ">=7.1.3",
+      "illuminate/support": "5.6.*|5.7.*|5.8.*|6.*",
+      "illuminate/view": "5.6.*|5.7.*|5.8.*|6.*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+          "LKozlova\\Widgets\\": ""
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LKozlova\\Widgets\\WidgetsServiceProvider"
+            ],
+            "aliases": {
+                "HtmlWidget": "LKozlova\\Widgets\\Facades\\HtmlFacade",
+                "TableWidget": "LKozlova\\Widgets\\Facades\\TableFacade"
+            }
+        }
+    }
+}
