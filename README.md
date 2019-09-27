@@ -144,6 +144,7 @@ especially useful if you want to use some widget inside the table.
 To do that you should to use _value_ instead of _attribute_ and pass the array _value => [(string)$value, 
 (array)$attributes]_. The dynamic variable you write like this: _.'attribute'_.   
 Look for example:
+```php
 {{TableWidget::table([
     'columns' => [
         [
