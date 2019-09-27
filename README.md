@@ -7,7 +7,7 @@ HtmlWidget
 -----------------------------------
 It is the widget for creating HTML.
 
-###Generating tags
+### Generating tags
 To generate HTML tag you should to call method _tag()_ of the _HtmlWidget_ class:
 ```php
 HtmlWidget::tag('p');
@@ -31,7 +31,7 @@ The result HTML:
 <button class="btn">Ok</button>
 ```
 
-####Composite tags
+#### Composite tags
 
 The Widgets return the string value which belong to integrated Laravel class Illuminate\Support\HtmlString. And then
 You can place the Widget to value of another Widget. For example:
@@ -72,7 +72,7 @@ The result HTML:
 ```
 As you may have noticed the Widgets are connected by a concatenation sign '.'. 
 
-####Simple tags
+#### Simple tags
 
 If you don`t want to make the closed tag or It is unprofitably for you to use the composite tags you can give the _false_ 
 argument to the method:
@@ -124,6 +124,7 @@ these properties:
     Your collections values
     ...
     </tbody>
+</table>
 ```
 If you want to name your column otherwise, you can do it:
 ```php
