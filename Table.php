@@ -117,12 +117,14 @@ class Table extends Widgets
     {
         $this->addTagToHtml('tbody');
 
-        if (is_object($this->collection[0])) {
-            foreach ($this->collection as $data) {
-                $this->renderTableRow($data);
+        if (!empty($this->collection)) {
+            if (is_object($this->collection[0])) {
+                foreach ($this->collection as $data) {
+                    $this->renderTableRow($data);
+                }
+            } else {
+                $this->renderTableRow($this->collection);
             }
-        } else {
-            $this->renderTableRow($this->collection);
         }
 
         $this->addTagToHtml('/tbody');
