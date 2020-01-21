@@ -54,8 +54,8 @@ class ListWidget extends Widgets
     {
         foreach ($this->collection as $item) {
             
-            if (isset($item->{$config['params']['attribute']})) {
-                throw new InvalidWidgetsException('Attrubute'. $config['params']['attribute'] . 'not found');
+            if (isset($item->{$this->config['params']['attribute']})) {
+                throw new InvalidWidgetsException('Attrubute'. $this->config['params']['attribute'] . 'not found');
             }
             
             $this->addTagToHtml('a', [
@@ -63,27 +63,33 @@ class ListWidget extends Widgets
                 'class' => 'list-group-item list-group-item-action',
             ]);
             
-            $this->addStringToHtml($item->{$config['params']['attribute']});
+            $this->addStringToHtml($item->{$this->config['params']['attribute']});
 
             $this->addTagToHtml('/a');
         }
     }
 
     /**
-     * @param $config
+     * @param $href
      * @param $data
      * @return string|string[]
+     * @throws InvalidWidgetsException
      */
-    protected function renderConfigHref($config, $data)
+    protected function renderConfigHref($href, $data)
     {
-        if (is_array($config)) {
-            $href = (string)$config[0];
-            foreach ($config[1] as $attribute => $value) {
-                $href = str_replace(".'$attribute'", $data->{$value}, $href);
+        if (is_array($href)) {
+            $href_link = (string)$href[0];
+
+            if (!is_array($href[1])) {
+                throw new InvalidWidgetsException( 'Array \'href\' not valid');
             }
-            return $href;
+
+            foreach ($href[1] as $attribute => $value) {
+                $result = str_replace(".'$attribute'", $data->{$value}, $href_link);
+            }
+            return $result;
         }
 
-        return $config;
+        return $href;
     }
 }
