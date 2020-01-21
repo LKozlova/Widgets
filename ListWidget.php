@@ -54,8 +54,8 @@ class ListWidget extends Widgets
     {
         foreach ($this->collection as $item) {
             
-            if (isset($item->{$this->config['params']['attribute']})) {
-                throw new InvalidWidgetsException('Attrubute'. $this->config['params']['attribute'] . 'not found');
+            if (!isset($item->{$this->config['params']['attribute']})) {
+                throw new InvalidWidgetsException('Attrubute '. $this->config['params']['attribute'] . ' not found');
             }
             
             $this->addTagToHtml('a', [
