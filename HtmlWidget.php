@@ -4,17 +4,17 @@
 namespace LKozlova\Widgets;
 
 /**
- * Class Html
+ * Class HtmlWidget
  * @package LKozlova\Widgets
  */
-class Html extends Widgets
+class HtmlWidget extends Widgets
 {
     private $tagName;
     private $config;
     private $endTag;
 
     /**
-     * Html constructor.
+     * HtmlWidget constructor.
      * @param string|null $tagName
      * @param array|null $config
      * @param $endTag

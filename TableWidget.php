@@ -7,7 +7,7 @@ use Illuminate\Support\HtmlString;
 use LKozlova\Widgets\Exceptions\InvalidWidgetsException;
 
 /**
- * Class Table
+ * Class TableWidget
  * @package LKozlova\Widgets
  *
  * {{TableWidget::table([
@@ -39,13 +39,13 @@ use LKozlova\Widgets\Exceptions\InvalidWidgetsException;
  *      ],
  * ], $queuelogs)}}
  */
-class Table extends Widgets
+class TableWidget extends Widgets
 {
     private $config;
     private $collection;
 
     /**
-     * Table constructor.
+     * TableWidget constructor.
      * @param array|null $config
      * @param null $collection
      */

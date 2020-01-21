@@ -4,12 +4,12 @@
 namespace LKozlova\Widgets\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use LKozlova\Widgets\HtmlWidget;
+use LKozlova\Widgets\ListWidget;
 
-class HtmlFacade extends Facade
+class ListFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return HtmlWidget::class;
+        return ListWidget::class;
     }
 }

@@ -29,7 +29,8 @@
             ],
             "aliases": {
                 "HtmlWidget": "LKozlova\\Widgets\\Facades\\HtmlFacade",
-                "TableWidget": "LKozlova\\Widgets\\Facades\\TableFacade"
+                "TableWidget": "LKozlova\\Widgets\\Facades\\TableFacade",
+                "ListWidget": "LKozlova\\Widgets\\Facades\\ListFacade"
             }
         }
     }
